@@ -4,14 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo/logo-web.svg" type="image/x-icon">
     <title>Solid_nextjstemplates</title>
-
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
 
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -21,12 +15,19 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <!-- tailwind  -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- custom color tailwind -->
+    <style type="text/tailwindcss">
+        @theme {
+        --color-darkmode: rgb(24 28 49);
+        --color-blackbtn: rgb(41 46 69);
+      }
+    </style>
     <!-- main css  -->
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
-<body>
+<body class="dark:bg-darkmode dark:text-zinc-400 text-gray-500">
 
     <!-- header  -->
     <section class=" fixed left-0 top-0 z-999 w-full py-7 flex @container">
@@ -153,17 +154,17 @@
             <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
                 <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
                     <div class="banner__left md:w-1/2">
-                        <h4 class="mb-4.5 text-lg font-medium text-black ">🔥 Solid - A Complete SaaS Starter Template
+                        <h4 class="mb-4.5 text-lg font-medium text-black dark:text-white">🔥 Solid - A Complete SaaS Starter Template
                             for SaaS</h4>
-                        <h1 class="mb-5 pr-16 text-3xl font-bold text-black xl:text-hero">Robust SaaS Boilerplate and
+                        <h1 class="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">Robust SaaS Boilerplate and
                             Starter for<span
-                                class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">Next.js</span>
+                                class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-cyan-200 dark:before:bg-gray-600">Next.js</span>
                         </h1>
                         <p>Packed with all the key integrations you need for swift SaaS startup launch, including -
                             Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More.
                             Built-winth - Next.js, React 18 and TypeScript.</p>
                         <div class="started__btn mt-10">
-                            <a class="inline-block rounded-full text-white bg-black px-7.5 py-2.5" href="">Get
+                            <a class="inline-block rounded-full text-white bg-black dark:bg-blackbtn px-7.5 py-2.5" href="">Get
                                 Started</a>
                         </div>
                     </div>
@@ -173,8 +174,10 @@
                             <img src="./img/shape/shape-02.svg" class="absolute bottom-0 right-0 z-10" alt="">
                             <img src="./img/shape/shape-03.svg" class="absolute -right-6.5 bottom-0 z-10" alt="">
                             <div class="relative aspect-[700/444] w-full">
-                                <img src="./img/hero/hero-light.svg" class="shadow-2xl/10 shadow-gray-400 dark:hidden" alt="">
-                                <img src="./img/hero/hero-dark.svg" class="hidden shadow-2xl/10 shadow-gray-400 dark:block" alt="">
+                                <img src="./img/hero/hero-light.svg" class="shadow-2xl/10 shadow-solid-l dark:hidden"
+                                    alt="">
+                                <img src="./img/hero/hero-dark.svg"
+                                    class="hidden shadow-2xl/10 shadow-solid-l dark:block" alt="">
                             </div>
                         </div>
                     </div>
