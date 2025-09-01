@@ -4,6 +4,7 @@ export default {
         extend: {
             colors: {
                 stroke: 'rgb(238 238 238)',
+                strokedark: 'rgb(45 47 64)',
             },
         },
         boxShadow: {
@@ -11,9 +12,6 @@ export default {
         },
         fontSize: {
             'hero': ['44px', { lineHeight: '58px' }],
-        },
-        borderColor: {
-            stroke: 'rgb(238 238 238)',
         },
     },
     plugins: [],
