@@ -1,3 +1,7 @@
+.animate__duration__logo {
+    --animate-duration: 0.3s;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     font-style: normal;
