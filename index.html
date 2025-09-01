@@ -14,20 +14,13 @@
     <!-- flowbite -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <!-- tailwind  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- custom color tailwind -->
-    <style type="text/tailwindcss">
-        @theme {
-        --color-darkmode: rgb(24 28 49);
-        --color-blackbtn: rgb(41 46 69);
-      }
-    </style>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="./src/output.css">
     <!-- main css  -->
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
-<body class="dark:bg-darkmode dark:text-zinc-400 text-gray-500">
+<body class="dark:bg-darkmode">
 
     <!-- header  -->
     <section class=" fixed left-0 top-0 z-999 w-full py-7 flex @container">
@@ -148,17 +141,17 @@
 
     </section>
 
-    <!-- phuoc -->
     <main>
-        <section class="banner overflow-hidden pt-35 pb-20 md:pt-40 xl:pt-46 xl:pb-25">
-            <div class="mx-auto max-w-[1390px] px-4 md:px-8 2xl:px-0">
+        <!-- phuoc banner -->
+        <section class="overflow-hidden pt-35 pb-20 md:pt-40 xl:pt-46 xl:pb-25">
+            <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
                 <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
                     <div class="banner__left md:w-1/2">
                         <h4 class="mb-4.5 text-lg font-medium text-black dark:text-white">🔥 Solid - A Complete SaaS Starter Template
                             for SaaS</h4>
                         <h1 class="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero">Robust SaaS Boilerplate and
                             Starter for<span
-                                class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-cyan-200 dark:before:bg-gray-600">Next.js</span>
+                                class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titledark">Next.js</span>
                         </h1>
                         <p>Packed with all the key integrations you need for swift SaaS startup launch, including -
                             Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More.
@@ -181,6 +174,38 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- phuoc logo -->
+        <section class="logo border border-x-0 border-y-str">
+            <div>
+                <div>
+                    <a href="">
+                        <img src="./img/brand/brand-light-01.svg" alt="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/brand/brand-light-02.svg" alt="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/brand/brand-light-03.svg" alt="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/brand/brand-light-04.svg" alt="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/brand/brand-light-05.svg" alt="">
+                        <img src="" alt="">
+                    </a>
+                    <a href="">
+                        <img src="./img/brand/brand-light-06.svg" alt="">
+                        <img src="" alt="">
+                    </a>
                 </div>
             </div>
         </section>
