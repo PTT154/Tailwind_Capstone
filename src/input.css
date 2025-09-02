@@ -18,15 +18,10 @@
 }
 
 @theme {
-<<<<<<< HEAD
-  /* custom color */
-=======
->>>>>>> 60029d50981a18438f72486dc9a1df4bba293f38
   --color-textlight: rgb(117 118 147);
   --color-textdark: rgb(153 154 161);
   --color-darkmode: rgb(24 28 49);
   --color-blackbtn: rgb(41 46 69);
-<<<<<<< HEAD
 
   --color-titlebg: rgb(173 255 248);
   --color-titlebg2: rgb(255 234 194);
@@ -41,17 +36,4 @@
 
   --color-meta: rgb(32 197 168);
   --color-blacksection: rgb(28 33 54);
-=======
-
-  --color-titlebg: rgb(173 255 248);
-  --color-titledark: rgb(70 73 90);
-
-  --color-black: rgb(24 28 49);
-  --color-btndark: rgb(41 46 69);
-  --color-alabaster: rgb(251 251 251);
-  --color-primary: rgb(0 107 255);
-  --color-primaryho: rgb(0 99 236);
-
-
->>>>>>> 60029d50981a18438f72486dc9a1df4bba293f38
 }

@@ -18,7 +18,6 @@ body {
 
 .started__btn:hover a {
     background-color: rgb(44 49 73);
-<<<<<<< HEAD
 }
 
 /* custom text */
@@ -30,6 +29,4 @@ body {
 .text-metatitle2 {
     font-size: 20px;
     line-height: 32px;
-=======
->>>>>>> 60029d50981a18438f72486dc9a1df4bba293f38
 }
