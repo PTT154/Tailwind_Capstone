@@ -8,19 +8,25 @@
 }
 
 @layer base {
-  body { @apply text-textlight dark:text-textdark}
+  body {
+    @apply text-textlight dark:text-textdark
+  }
 }
 
 @theme {
-    --color-textlight: rgb(117 118 147);
-    --color-textdark: rgb(153 154 161);
-    --color-darkmode: rgb(24 28 49);
-    --color-blackbtn: rgb(41 46 69);
+  --color-textlight: rgb(117 118 147);
+  --color-textdark: rgb(153 154 161);
+  --color-darkmode: rgb(24 28 49);
+  --color-blackbtn: rgb(41 46 69);
 
-    --color-titlebg: rgb(173 255 248);
-    --color-titledark: rgb(70 73 90);
-    
-    --color-black: rgb(24 28 49);
-    --color-btndark: rgb(41 46 69);
-    --color-alabaster: rgb(251 251 251);
+  --color-titlebg: rgb(173 255 248);
+  --color-titledark: rgb(70 73 90);
+
+  --color-black: rgb(24 28 49);
+  --color-btndark: rgb(41 46 69);
+  --color-alabaster: rgb(251 251 251);
+  --color-primary: rgb(0 107 255);
+  --color-primaryho: rgb(0 99 236);
+
+
 }
