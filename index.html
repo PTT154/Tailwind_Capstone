@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./img/logo/logo-web.svg" type="image/x-icon">
     <title>Solid</title>
 
+
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -589,45 +590,6 @@
     <br>
     <br>
     <br>
-    <!-- theme dark/light  -->
-    <script>
-        !function () {
-            try {
-                var d = document.documentElement
-                    , c = d.classList;
-                c.remove('light', 'dark');
-                var e = localStorage.getItem('theme');
-                if (e) {
-                    c.add(e || '')
-                } else {
-                    c.add('light');
-                }
-                if (e === 'light' || e === 'dark' || !e)
-                    d.style.colorScheme = e || 'light'
-            } catch (t) { }
-        }();
-    </script>
-
-    <!-- toggle menu -->
-    <script>
-        // Khởi tạo biến trạng thái
-        let toggleState = "";
-
-        // Lấy phần tử button
-        var toggleBtn = document.getElementById("toggleBtn");
-
-        // Gắn sự kiện click
-        toggleBtn.addEventListener("click", () => {
-            if (toggleState === "") {
-                toggleState = true;
-            } else {
-                toggleState = !toggleState;
-            }
-
-            console.log("Trạng thái hiện tại:", toggleState);
-        });
-    </script>
-
     <!-- wow js -->
     <script src="./js/wow.min.js"></script>
     <script>
