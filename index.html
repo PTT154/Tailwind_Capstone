@@ -26,52 +26,53 @@
 
     <!-- header tan -->
     <header class=" fixed left-0 top-0 z-999 w-full py-7 border-b border-y-stroke bg-white">
-        <div class="mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
+        <div class="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
             <div class="flex w-full items-center justify-between xl:w-1/4">
                 <a href="#">
                     <img alt="logo" loading="lazy" width="119.03" height="30" decoding="async" data-nimg="1"
                         style="color:transparent" src="./img/logo-light.svg" class="h-8" alt="" />
 
                 </a>
-                <button aria-label="button for menu toggle" class="block xl:hidden">
+                <!-- Toggle Button -->
+                <button aria-label="navbar-default" type="button" class="block xl:hidden items-center p-2 w-10 h-10 justify-center text-sm
+                 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400
+                 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" id="toggleBtn">
                     <span class="relative block h-5.5 w-5.5 cursor-pointer">
                         <span class="du-block absolute right-0 h-full w-full">
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white !w-full delay-300"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5  rounded-sm bg-black  duration-200 ease-in-out dark:bg-white !w-full delay-300"></span>
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white delay-400 !w-full"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5  rounded-sm bg-black  duration-200 ease-in-out dark:bg-white delay-400 !w-full"></span>
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white !w-full delay-500"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black  duration-200 ease-in-out dark:bg-white !w-full delay-500"></span>
                         </span>
                         <span class="du-block absolute right-0 h-full w-full rotate-45">
                             <span
-                                class="absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white !h-0 delay-[0]"></span>
+                                class="absolute left-2.5 top-0 block  w-0.5 rounded-sm bg-black duration-200 ease-in-out dark:bg-white !h-0 delay-[0]"></span>
                             <span
-                                class="delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white dealy-200 !h-0"></span>
+                                class="delay-400 absolute left-0 top-2.5 block w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white dealy-200 !h-0"></span>
                         </span>
                     </span>
                 </button>
 
             </div>
-            <div class=" w-full flex items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ">
+            <div class=" hidden w-full md:block md:w-auto invisible h-0 items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false"
+                id="navbar-default">
                 <nav>
-                    <ul class="flex flex-col gap-5 md:flex-row xl:flex-row xl:items-center xl:gap-10">
+                    <ul
+                        class="flex flex-col gap-5 md:flex-row md:items-center md:gap-8 xl:flex-row xl:items-center xl:gap-10">
 
                         <li>
-                            <a href="#"
-                                class=" text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                            <a href="#" class="text-primary hover:text-primary">Home</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class=" text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Features</a>
+                            <a href="#" class="hover:text-primary">Features</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class=" text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+                            <a href="#" class="hover:text-primary">Blog</a>
                         </li>
                         <li>
-                            <a href="#"
-                                class=" text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Docs</a>
+                            <a href="#" class="hover:text-primary">Docs</a>
                         </li>
 
                         <!-- Dropdown menu -->
@@ -122,8 +123,7 @@
 
 
                         <li>
-                            <a href="#"
-                                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Support</a>
+                            <a href="#" class="hover:text-primary">Support</a>
                         </li>
 
                     </ul>
@@ -132,7 +132,7 @@
                 </nav>
                 <div class="ml-auto mt-7 flex items-center gap-6 xl:mt-0">
                     <button
-                        class="hidden h-[38px] w-[38px] items-center justify-center rounded-full bg-white text-waterloo dark:bg-black sm:flex">
+                        class="cursor-pointer hidden h-[38px] w-[38px] items-center justify-center rounded-full bg-white text-waterloo dark:bg-black sm:flex">
                         <svg width="20" height="20" viewBox="0 0 18 18" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_369_1884)">
@@ -148,15 +148,17 @@
                             </defs>
                         </svg>
                     </button>
-                    <button aria-label="theme toggler"
-                        class="bg-gray-2 dark:bg-dark-bg absolute right-17 mr-1.5 flex cursor-pointer items-center justify-center rounded-full text-black dark:text-white lg:static">
+                    <button aria-label="theme toggler" class="bg-gray-2 dark:bg-dark-bg absolute right-17 mr-1.5 flex 
+                        cursor-pointer items-center justify-center rounded-full text-black dark:text-white lg:static">
                         <img alt="logo" loading="lazy" width="21" height="21" decoding="async" data-nimg="1"
                             class="dark:hidden" style="color:transparent" src="./img/icon-moon.svg" />
+                        <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
+                            class="hidden dark:block" style="color:transparent" src="./img/icon-sun.svg" />
 
                     </button>
-                    <a class="text-regular font-medium text-waterloo hover:text-primary" href="/auth/signin">Sign In</a>
-                    <a class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular  text-white duration-300 ease-in-out hover:bg-primaryho"
-                        href="/auth/signup">Sign Up</a>
+                    <a class="text-regular font-medium text-waterloo hover:text-primary" href="#">Sign In</a>
+                    <a class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular 
+                     text-white duration-300 ease-in-out hover:bg-primaryho" href="#">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -277,11 +279,94 @@
             </div>
         </section>
 
+        <!-- section Features tan -->
+        <section id="features" class="py-20 lg:py-25 xl:py-30">
+            <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+                <div class="animate_top mx-auto text-center" style="opacity:1 shadow-solid-3">
+                    <div
+                        class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                        <span class="text-sectiontitle font-medium text-black dark:text-white">SOLID FEATURES</span>
+                    </div>
+                    <h2
+                        class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
+                        Core Features of Solid</h2>
+                    <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. In
+                        convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+                        ante in maximus.</p>
+                </div>
+                <div
+                    class="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-01.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                            Crafted for SaaS</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-02.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                            High-quality Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-03.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                            Next.js + TypeScript</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-04.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                            Sanity Blog and Docs</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-05.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">DB,
+                            Auth and Stripe</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                    <div class="animate_top z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                        style="opacity:1">
+                        <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                            <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                                style="color:transparent" src="./img/icon/icon-06.svg" />
+                        </div>
+                        <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                            Regular Free Updates</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- A Complete Solution + Packed phuoc -->
         <section class="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
             <div class="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
                 <div class="flex items-center gap-8 lg:gap-32.5">
-                    <div class="wow animate__animated animate__fadeInLeft relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2">
+                    <div
+                        class="wow animate__animated animate__fadeInLeft relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2">
                         <img src="./img/about/about-light-01.webp" alt="" class="dark:hidden">
                         <img src="./img/about/about-dark-01.webp" alt="" class="hidden dark:block">
                     </div>
@@ -291,27 +376,34 @@
                                 class="mb-4 mr-4 inline-flex px-4.5 py-1 rounded-full bg-meta text-metatitle text-white">New</span>
                             SaaS Boilerplate for Next.js
                         </h4>
-                        <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">A Complete Solution for 
-                            <span class="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titledark">SaaS Startup</span>
+                        <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">A Complete
+                            Solution for
+                            <span
+                                class="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titledark">SaaS
+                                Startup</span>
                         </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum
                             ultrices. Fusce consectetur le.</p>
 
                         <div class="mt-7.5 flex items-center gap-5">
-                            <div class="flex h-15 w-15 items-center justify-center border rounded-full border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <div
+                                class="flex h-15 w-15 items-center justify-center border rounded-full border-stroke dark:border-strokedark dark:bg-blacksection">
                                 <p class="text-metatitle2 font-semibold text-black dark:text-white">01</p>
                             </div>
                             <div class="w-3/4">
-                                <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Mailchimp for Newsletter Emails + SMTP for Transactional Emails</h3>
+                                <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Mailchimp for Newsletter
+                                    Emails + SMTP for Transactional Emails</h3>
                                 <p>Ut ultricies lacus non fermentum ultrices.</p>
                             </div>
                         </div>
-                         <div class="mt-7.5 flex items-center gap-5">
-                            <div class="flex h-15 w-15 items-center justify-center border rounded-full border-stroke dark:border-strokedark dark:bg-blacksection">
+                        <div class="mt-7.5 flex items-center gap-5">
+                            <div
+                                class="flex h-15 w-15 items-center justify-center border rounded-full border-stroke dark:border-strokedark dark:bg-blacksection">
                                 <p class="text-metatitle2 font-semibold text-black dark:text-white">02</p>
                             </div>
                             <div class="w=3/4">
-                                <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Algolia Integration for Site Search</h3>
+                                <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Algolia Integration for
+                                    Site Search</h3>
                                 <p>consectetur adipiscing elit fermentum ultricies.</p>
                             </div>
                         </div>
@@ -326,24 +418,152 @@
                         <h4 class="font-medium uppercase text-black dark:text-white">
                             Launch Your SaaS Fast
                         </h4>
-                        <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">Packed with All Essential<span class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titledark">Integrations</span>
+                        <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">Packed with
+                            All Essential<span
+                                class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titledark">Integrations</span>
                         </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum
                             ultrices. Fusce consectetur le.</p>
                         <div>
-                            <a href="" class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white">
+                            <a href=""
+                                class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white">
                                 <span class="duration-300 group-hover:pr-2">Know More</span>
-                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="M10.4766 6.16664L6.00658 1.69664L7.18492 0.518311L13.6666 6.99998L7.18492 13.4816L6.00658 12.3033L10.4766 7.83331H0.333252V6.16664H10.4766Z" fill="currentColor"></path></svg>
+                                <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M10.4766 6.16664L6.00658 1.69664L7.18492 0.518311L13.6666 6.99998L7.18492 13.4816L6.00658 12.3033L10.4766 7.83331H0.333252V6.16664H10.4766Z"
+                                        fill="currentColor"></path>
+                                </svg>
                             </a>
                         </div>
                     </div>
-                    <div class="wow animate__animated animate__fadeInRight relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2" data-wow-duration="1.2s">
+                    <div class="wow animate__animated animate__fadeInRight relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2"
+                        data-wow-duration="1.2s">
                         <img src="./img/about/about-light-02.svg" alt="" class="dark:hidden">
                         <img src="./img/about/about-dark-02.svg" alt="" class="hidden dark:block">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Solid UI tan -->
+        <section class="relative pb-20 pt-18.5 lg:pb-22.5">
+            <div class="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+                <div class="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
+                    <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden"
+                        style="position:absolute" src="./img/shape/shape-dotted-light.svg" />
+                    <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
+                        style="position:absolute" src="./img/shape/shape-dotted-dark.svg" />
+                </div>
+                <div class="animate_top mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5"
+                    style="opacity:1">
+                    <div
+                        class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 active before:absolute before:bottom-0 before:left-0 before:h-1 before:w-full before:rounded-tl-[4px] before:rounded-tr-[4px] before:bg-primary">
+                        <div
+                            class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <p class="text-metatitle3 font-medium text-black dark:text-white">01</p>
+                        </div>
+                        <div class="md:w-3/5 lg:w-auto">
+                            <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Clean User
+                                Interface</button>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 ">
+                        <div
+                            class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <p class="text-metatitle3 font-medium text-black dark:text-white">02</p>
+                        </div>
+                        <div class="md:w-3/5 lg:w-auto">
+                            <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Essential
+                                Business Pages</button>
+                        </div>
+                    </div>
+                    <div
+                        class="relative flex w-full cursor-pointer items-center gap-4 border-b border-stroke px-6 py-2 last:border-0 dark:border-strokedark md:w-auto md:border-0 xl:px-13.5 xl:py-5 ">
+                        <div
+                            class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <p class="text-metatitle3 font-medium text-black dark:text-white">03</p>
+                        </div>
+                        <div class="md:w-3/5 lg:w-auto">
+                            <button class="text-sm font-medium text-black dark:text-white xl:text-regular">Fully
+                                Functional Integrations</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate_top mx-auto max-w-c-1154" style="opacity: 1">
+                    <div class="block">
+                        <div class="flex items-center gap-8 lg:gap-19">
+                            <div class="md:w-1/2">
+                                <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
+                                    Solid UI with Solid Features.</h2>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies
+                                    lacus non fermentum ultrices. Fusce consectetur le.</p>
+                                <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec
+                                    finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            </div>
+                            <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                                <img alt="Solid UI with Solid Features." loading="lazy" decoding="async"
+                                    data-nimg="fill" class="dark:hidden"
+                                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                    sizes="100vw" srcSet="" src=>
+                                <img alt="Solid UI with Solid Features." loading="lazy" decoding="async"
+                                    data-nimg="fill" class="hidden dark:block" style="position:absolute"
+                                    src="./img/hero/hero-light.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden">
+                        <div class="flex items-center gap-8 lg:gap-19">
+                            <div class="md:w-1/2">
+                                <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
+                                    Pages and UI Components You Need for a SaaS.</h2>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies
+                                    lacus non fermentum ultrices. Fusce consectetur le.</p>
+                                <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec
+                                    finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            </div>
+                            <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                                <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async"
+                                    data-nimg="fill" class="dark:hidden"
+                                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                    sizes="100vw"
+                                    srcSet="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75 3840w"
+                                    src="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75" />
+                                <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async"
+                                    data-nimg="fill" class="hidden dark:block"
+                                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                    src="./img/hero/hero-light.svg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden">
+                        <div class="flex items-center gap-8 lg:gap-19">
+                            <div class="md:w-1/2">
+                                <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
+                                    Functional Blog, DB, Auth and Many More</h2>
+                                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies
+                                    lacus non fermentum ultrices. Fusce consectetur le.</p>
+                                <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec
+                                    finibus sagittis. Nulla ligula nunc egestas ut.</p>
+                            </div>
+                            <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                                <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async"
+                                    data-nimg="fill" class="dark:hidden"
+                                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                    sizes="100vw"
+                                    srcSet="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75 3840w"
+                                    src="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75" />
+                                <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async"
+                                    data-nimg="fill" class="hidden dark:block"
+                                    style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+                                    src="./img/hero/hero-light.svg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <br>
     <br>
@@ -369,6 +589,45 @@
     <br>
     <br>
     <br>
+    <!-- theme dark/light  -->
+    <script>
+        !function () {
+            try {
+                var d = document.documentElement
+                    , c = d.classList;
+                c.remove('light', 'dark');
+                var e = localStorage.getItem('theme');
+                if (e) {
+                    c.add(e || '')
+                } else {
+                    c.add('light');
+                }
+                if (e === 'light' || e === 'dark' || !e)
+                    d.style.colorScheme = e || 'light'
+            } catch (t) { }
+        }();
+    </script>
+
+    <!-- toggle menu -->
+    <script>
+        // Khởi tạo biến trạng thái
+        let toggleState = "";
+
+        // Lấy phần tử button
+        var toggleBtn = document.getElementById("toggleBtn");
+
+        // Gắn sự kiện click
+        toggleBtn.addEventListener("click", () => {
+            if (toggleState === "") {
+                toggleState = true;
+            } else {
+                toggleState = !toggleState;
+            }
+
+            console.log("Trạng thái hiện tại:", toggleState);
+        });
+    </script>
+
     <!-- wow js -->
     <script src="./js/wow.min.js"></script>
     <script>
