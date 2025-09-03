@@ -18,7 +18,6 @@
 }
 
 @theme {
-  /* custom color */
   --color-textlight: rgb(117 118 147);
   --color-textdark: rgb(153 154 161);
   --color-darkmode: rgb(24 28 49);
