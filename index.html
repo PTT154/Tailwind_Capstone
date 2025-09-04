@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="./img/logo/logo-web.svg" type="image/x-icon">
     <title>Solid</title>
 
-
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
@@ -26,17 +25,18 @@
 <body class="dark:bg-darkmode">
 
     <!-- header tan -->
-    <header class=" fixed left-0 top-0 z-999 w-full py-7 border-b border-y-stroke bg-white">
+    <header id="mainHeader" class=" fixed left-0 top-0 z-999 w-full py-7">
         <div class="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
             <div class="flex w-full items-center justify-between xl:w-1/4">
                 <a href="#">
-                    <img alt="logo" loading="lazy" width="119.03" height="30" decoding="async" data-nimg="1"
-                        style="color:transparent" src="./img/logo-light.svg" class="h-8" alt="" />
-
+                    <img alt="logo" loading="lazy" width="120" height="30" decoding="async" data-nimg="1"
+                        class="hidden w-full dark:block" src="./img/logo/logo-dark.svg" style="color: transparent;">
+                    <img alt="logo" loading="lazy" width="120" height="30" decoding="async" data-nimg="1"
+                        class="w-full dark:hidden block" src="./img/logo/logo-light.svg" style="color:transparent" />
                 </a>
                 <!-- Toggle Button -->
-                <button aria-label="navbar-default" type="button" class="block xl:hidden items-center p-2 w-10 h-10 justify-center text-sm
-                 text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400
+                <button aria-label="navbar-default" type="button" class="block xl:hidden items-center justify-center text-sm
+                 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400
                  dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" id="toggleBtn">
                     <span class="relative block h-5.5 w-5.5 cursor-pointer">
                         <span class="du-block absolute right-0 h-full w-full">
@@ -57,8 +57,7 @@
                 </button>
 
             </div>
-            <div class=" hidden w-full md:block md:w-auto invisible h-0 items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false"
-                id="navbar-default">
+            <div class="invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false">
                 <nav>
                     <ul
                         class="flex flex-col gap-5 md:flex-row md:items-center md:gap-8 xl:flex-row xl:items-center xl:gap-10">
@@ -89,46 +88,38 @@
                                     </svg>
                                 </span>
                             </button>
-                            <div
-                                class="absolute left-0 z-10 hidden group-hover:block font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
-                                <ul class="py-2 text-sm text-gray-700 dark:text-gray-400">
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white ">
+
+                            <div class="dropdown absolute xl:invisible xl:mt-0 xl:w-[250px] xl:translate-y-10 xl:opacity-0 
+                            left-[-1.875rem] rounded-[0.375rem] border bg-white py-5 px-8 before:bg-white border-lightborder
+                            dark:border-darkborder dark:bg-darkmode dark:before:bg-darkmode
+                            group-hover:xl:visible group-hover:xl:translate-y-[1.625rem] group-hover:xl:opacity-100">
+                                <ul class=" xl:flex flex-col gap-[1rem]">
+                                    <li class="hover:text-primary">
                                         <a href="#">Blog Grid</a>
                                     </li>
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <li class="hover:text-primary">
                                         <a href="/auth/signin">Sign In</a>
                                     </li>
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <li class="hover:text-primary">
                                         <a href="/auth/signup">Sign Up</a>
                                     </li>
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <li class="hover:text-primary">
                                         <a href="/docs">Docs</a>
                                     </li>
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <li class="hover:text-primary">
                                         <a href="/support">Support</a>
                                     </li>
-                                    <li
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    <li class="hover:text-primary">
                                         <a href="/error">404</a>
                                     </li>
                                 </ul>
-
                             </div>
-
                         </li>
-
 
                         <li>
                             <a href="#" class="hover:text-primary">Support</a>
                         </li>
-
                     </ul>
-
 
                 </nav>
                 <div class="ml-auto mt-7 flex items-center gap-6 xl:mt-0">
@@ -149,17 +140,17 @@
                             </defs>
                         </svg>
                     </button>
-                    <button aria-label="theme toggler" class="bg-gray-2 dark:bg-dark-bg absolute right-17 mr-1.5 flex 
+                    <button id="theme-toggle" aria-label="theme toggler" class="bg-gray-2 dark:bg-dark-bg absolute right-17 mr-1.5 flex 
                         cursor-pointer items-center justify-center rounded-full text-black dark:text-white lg:static">
                         <img alt="logo" loading="lazy" width="21" height="21" decoding="async" data-nimg="1"
-                            class="dark:hidden" style="color:transparent" src="./img/icon-moon.svg" />
+                            class="dark:hidden block" style="color:transparent" src="./img/icon-moon.svg" />
                         <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
                             class="hidden dark:block" style="color:transparent" src="./img/icon-sun.svg" />
 
                     </button>
                     <a class="text-regular font-medium text-waterloo hover:text-primary" href="#">Sign In</a>
-                    <a class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular 
-                     text-white duration-300 ease-in-out hover:bg-primaryho" href="#">Sign Up</a>
+                    <a class="xl:flex hidden items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+                        href="/auth/signup">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -195,8 +186,8 @@
                             <img src="./img/shape/shape-02.svg" class="absolute bottom-0 right-0 z-10" alt="">
                             <img src="./img/shape/shape-03.svg" class="absolute -right-6.5 bottom-0 z-10" alt="">
                             <div class="relative aspect-[700/444] w-full">
-                                <img src="./img/hero/hero-light.svg" class="shadow-2xl/10 shadow-solid-l dark:hidden"
-                                    alt="">
+                                <img src="./img/hero/hero-light.svg"
+                                    class="shadow-2xl/10 shadow-solid-l dark:hidden block" alt="">
                                 <img src="./img/hero/hero-dark.svg"
                                     class="hidden shadow-2xl/10 shadow-solid-l dark:block" alt="">
                             </div>
@@ -215,7 +206,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.3s;">
                         <img src="./img/brand/brand-light-01.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-01.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -226,7 +217,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.4s;">
                         <img src="./img/brand/brand-light-02.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-02.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -237,7 +228,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.5s;">
                         <img src="./img/brand/brand-light-03.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-03.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -248,7 +239,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.6s;">
                         <img src="./img/brand/brand-light-04.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-04.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -259,7 +250,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.7s;">
                         <img src="./img/brand/brand-light-05.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-05.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -270,7 +261,7 @@
                         class="relative block h-10 w-[98px] wow animate__animated animate__fadeInDown animate__duration__logo"
                         style="animation-delay: 0.8s;">
                         <img src="./img/brand/brand-light-06.svg" alt=""
-                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                            class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden block"
                             style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                         <img src="./img/brand/brand-dark-06.svg" alt=""
                             class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
@@ -368,8 +359,10 @@
                 <div class="flex items-center gap-8 lg:gap-32.5">
                     <div
                         class="wow animate__animated animate__fadeInLeft relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2">
-                        <img src="./img/about/about-light-01.webp" alt="" class="dark:hidden">
-                        <img src="./img/about/about-dark-01.webp" alt="" class="hidden dark:block">
+                        <img src="./img/about/about-light-01.webp" alt="" class="dark:hidden block"
+                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        <img src="./img/about/about-dark-01.webp" alt="" class="hidden dark:block"
+                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
                     </div>
                     <div class="wow animate__animated animate__fadeInRight md:w-1/2">
                         <h4 class="font-medium uppercase text-black dark:text-white">
@@ -439,7 +432,7 @@
                     </div>
                     <div class="wow animate__animated animate__fadeInRight relative hidden mx-auto aspect-[588/526.5] md:block md:w-1/2"
                         data-wow-duration="1.2s">
-                        <img src="./img/about/about-light-02.svg" alt="" class="dark:hidden">
+                        <img src="./img/about/about-light-02.svg" alt="" class="dark:hidden block">
                         <img src="./img/about/about-dark-02.svg" alt="" class="hidden dark:block">
                     </div>
                 </div>
@@ -450,7 +443,7 @@
         <section class="relative pb-20 pt-18.5 lg:pb-22.5">
             <div class="relative mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
                 <div class="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
-                    <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden"
+                    <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden block"
                         style="position:absolute" src="./img/shape/shape-dotted-light.svg" />
                     <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
                         style="position:absolute" src="./img/shape/shape-dotted-dark.svg" />
@@ -504,7 +497,7 @@
                             </div>
                             <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                                 <img alt="Solid UI with Solid Features." loading="lazy" decoding="async"
-                                    data-nimg="fill" class="dark:hidden"
+                                    data-nimg="fill" class="dark:hidden block"
                                     style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                     sizes="100vw" srcSet="" src=>
                                 <img alt="Solid UI with Solid Features." loading="lazy" decoding="async"
@@ -525,7 +518,7 @@
                             </div>
                             <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                                 <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async"
-                                    data-nimg="fill" class="dark:hidden"
+                                    data-nimg="fill" class="dark:hidden block"
                                     style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                     sizes="100vw"
                                     srcSet="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75 3840w"
@@ -549,7 +542,7 @@
                             </div>
                             <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
                                 <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async"
-                                    data-nimg="fill" class="dark:hidden"
+                                    data-nimg="fill" class="dark:hidden block"
                                     style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
                                     sizes="100vw"
                                     srcSet="/_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=640&amp;q=75 640w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=750&amp;q=75 750w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=828&amp;q=75 828w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2Fimages%2Ffeatures%2Ffeatures-light-01.png&amp;w=3840&amp;q=75 3840w"
@@ -590,6 +583,10 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- wow js -->
     <script src="./js/wow.min.js"></script>
     <script>
@@ -597,6 +594,8 @@
     </script>
     <!-- flowbite  -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/headerborder.js"></script>
 </body>
 
 </html>

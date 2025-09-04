@@ -18,8 +18,12 @@
 }
 
 @theme {
+  --color-waterloo: #757693;
+
   --color-textlight: rgb(117 118 147);
   --color-textdark: rgb(153 154 161);
+  --color-darkborder: rgb(45 47 64);
+  --color-lightborder:rgba(238, 238, 238);
   --color-darkmode: rgb(24 28 49);
   --color-blackbtn: rgb(41 46 69);
 
