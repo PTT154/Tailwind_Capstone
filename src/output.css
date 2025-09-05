@@ -1286,6 +1286,15 @@
       }
     }
   }
+  .dark\:hover\:text-primary {
+    &:is(.dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
   .dark\:focus\:ring-gray-600 {
     &:is(.dark *) {
       &:focus {
