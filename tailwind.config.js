@@ -12,6 +12,8 @@ module.exports = {
             },
             fontSize: {
                 'hero': ['44px', { lineHeight: '58px' }],
+                'sectiontitle3': ["44px", { lineHeight: "55px" }],
+                'para2': ["22px", {lineHeight: "35px"}],
             },
         },
     },
