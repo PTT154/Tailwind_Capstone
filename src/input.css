@@ -9,6 +9,10 @@
   .max-w-c-1235 {
     max-width: 77.188rem;
   }
+
+  .max-w-c-1154 {
+    max-width: 72.125rem;
+  }
 }
 
 @layer base {
@@ -42,4 +46,6 @@
 
   --color-meta: rgb(32 197 168);
   --color-blacksection: rgb(28 33 54);
+
+  --color-zumthor: rgb(237 245 255);
 }

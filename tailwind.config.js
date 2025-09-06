@@ -9,11 +9,13 @@ module.exports = {
             },
             boxShadow: {
                 'solid-l': '0px 10px 120px 0px rgba(45, 74, 170, 0.1)',
+                'solid-7': '0px 30px 50px rgba(45, 74, 170, .1)',
             },
             fontSize: {
                 'hero': ['44px', { lineHeight: '58px' }],
                 'sectiontitle3': ["44px", { lineHeight: "55px" }],
-                'para2': ["22px", {lineHeight: "35px"}],
+                'sectiontitle': ["14px", { lineHeight: "22px" }],
+                'para2': ["22px", { lineHeight: "35px" }],
             },
         },
     },
