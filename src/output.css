@@ -433,9 +433,6 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-50 {
-    height: calc(var(--spacing) * 50);
-  }
   .h-\[11px\] {
     height: 11px;
   }
@@ -454,14 +451,17 @@
   .h-\[132px\] {
     height: 132px;
   }
+  .h-\[299\] {
+    height: 299;
+  }
+  .h-\[299px\] {
+    height: 299px;
+  }
   .h-\[350px\] {
     height: 350px;
   }
   .h-\[384px\] {
     height: 384px;
-  }
-  .h-\[400px\] {
-    height: 400px;
   }
   .h-full {
     height: 100%;
@@ -511,9 +511,6 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
   .w-\[11px\] {
     width: 11px;
   }
@@ -538,11 +535,11 @@
   .w-\[132px\] {
     width: 132px;
   }
+  .w-\[299px\] {
+    width: 299px;
+  }
   .w-\[335px\] {
     width: 335px;
-  }
-  .w-\[1200px\] {
-    width: 1200px;
   }
   .w-full {
     width: 100%;
@@ -585,6 +582,9 @@
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -757,6 +757,9 @@
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
@@ -765,6 +768,12 @@
   }
   .py-11 {
     padding-block: calc(var(--spacing) * 11);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
+  .py-12\.5 {
+    padding-block: calc(var(--spacing) * 12.5);
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
@@ -789,6 +798,12 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-2\.5 {
+    padding-left: calc(var(--spacing) * 2.5);
   }
   .text-center {
     text-align: center;
@@ -1043,6 +1058,13 @@
       }
     }
   }
+  .hover\:opacity-90 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 90%;
+      }
+    }
+  }
   .hover\:opacity-100 {
     &:hover {
       @media (hover: hover) {
@@ -1092,6 +1114,16 @@
       width: calc(4/5 * 100%);
     }
   }
+  .md\:w-\[20\%\] {
+    @media (width >= 48rem) {
+      width: 20%;
+    }
+  }
+  .md\:w-\[70\%\] {
+    @media (width >= 48rem) {
+      width: 70%;
+    }
+  }
   .md\:w-auto {
     @media (width >= 48rem) {
       width: auto;
@@ -1122,6 +1154,16 @@
       align-items: center;
     }
   }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .md\:gap-0 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 0);
+    }
+  }
   .md\:gap-8 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 8);
@@ -1141,6 +1183,11 @@
   .md\:px-8 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:px-12\.5 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12.5);
     }
   }
   .md\:pt-40 {
@@ -1173,6 +1220,11 @@
       display: block;
     }
   }
+  .lg\:w-1\/2 {
+    @media (width >= 64rem) {
+      width: calc(1/2 * 100%);
+    }
+  }
   .lg\:w-2\/3 {
     @media (width >= 64rem) {
       width: calc(2/3 * 100%);
@@ -1186,6 +1238,16 @@
   .lg\:w-11\/12 {
     @media (width >= 64rem) {
       width: calc(11/12 * 100%);
+    }
+  }
+  .lg\:w-\[45\%\] {
+    @media (width >= 64rem) {
+      width: 45%;
+    }
+  }
+  .lg\:w-\[60\%\] {
+    @media (width >= 64rem) {
+      width: 60%;
     }
   }
   .lg\:w-auto {
@@ -1340,6 +1402,11 @@
       align-items: center;
     }
   }
+  .xl\:justify-between {
+    @media (width >= 80rem) {
+      justify-content: space-between;
+    }
+  }
   .xl\:gap-10 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 10);
@@ -1373,6 +1440,16 @@
   .xl\:px-13\.5 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 13.5);
+    }
+  }
+  .xl\:px-17\.5 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 17.5);
+    }
+  }
+  .xl\:py-0 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 0);
     }
   }
   .xl\:py-5 {
@@ -1415,6 +1492,12 @@
     @media (width >= 80rem) {
       font-size: 44px;
       line-height: var(--tw-leading, 55px);
+    }
+  }
+  .xl\:text-sectiontitle4 {
+    @media (width >= 80rem) {
+      font-size: 34px;
+      line-height: var(--tw-leading, 48px);
     }
   }
   .xl\:opacity-0 {
@@ -1542,6 +1625,11 @@
   .dark\:stroke-strokedark {
     &:is(.dark *) {
       stroke: rgb(45 47 64);
+    }
+  }
+  .dark\:text-black {
+    &:is(.dark *) {
+      color: var(--color-black);
     }
   }
   .dark\:text-gray-400 {

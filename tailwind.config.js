@@ -15,6 +15,7 @@ module.exports = {
                 'hero': ['44px', { lineHeight: '58px' }],
                 'sectiontitle3': ["44px", { lineHeight: "55px" }],
                 'sectiontitle': ["14px", { lineHeight: "22px" }],
+                'sectiontitle4': ["34px", { lineHeight: "48px" }],
                 'para2': ["22px", { lineHeight: "35px" }],
             },
         },
