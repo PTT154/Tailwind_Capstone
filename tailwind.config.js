@@ -11,6 +11,7 @@ module.exports = {
                 'solid-l': '0px 10px 120px 0px rgba(45, 74, 170, 0.1)',
                 'solid-7': '0px 30px 50px rgba(45, 74, 170, .1)',
                 'solid-8': '0px 12px 120px rgba(45,74,170,.06)',
+                'solid-9': '0px 12px 30px rgba(45,74,170,.06)'
             },
             fontSize: {
                 'hero': ['44px', { lineHeight: '58px' }],
