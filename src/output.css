@@ -39,6 +39,7 @@
     --color-textdark: rgb(153 154 161);
     --color-darkborder: rgb(45 47 64);
     --color-lightborder: rgba(238, 238, 238);
+    --color-hoverdark: rgb(37 42 66);
     --color-darkmode: rgb(24 28 49);
     --color-blackbtn: rgb(41 46 69);
     --color-titlebg: rgb(173 255 248);
@@ -460,6 +461,9 @@
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-1\/6 {
     width: calc(1/6 * 100%);
   }
@@ -776,6 +780,10 @@
     font-size: 18px;
     line-height: var(--tw-leading, 26px);
   }
+  .text-regular {
+    font-size: 16px;
+    line-height: var(--tw-leading, 26px);
+  }
   .text-sectiontitle {
     font-size: 14px;
     line-height: var(--tw-leading, 22px);
@@ -831,6 +839,14 @@
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-solid-3 {
+    --tw-shadow: 0px 6px 90px var(--tw-shadow-color, rgba(8, 14, 40, .04));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-solid-5 {
+    --tw-shadow: 0px 8px 24px var(--tw-shadow-color, rgba(45, 74, 170, .08));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-solid-7 {
@@ -1039,6 +1055,14 @@
     &:hover {
       @media (hover: hover) {
         opacity: 100%;
+      }
+    }
+  }
+  .hover\:shadow-solid-4 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-shadow: 0px 6px 90px var(--tw-shadow-color, rgba(8, 14, 40, .1));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
     }
   }
@@ -1468,6 +1492,24 @@
       line-height: var(--tw-leading, 58px);
     }
   }
+  .xl\:text-itemtitle {
+    @media (width >= 80rem) {
+      font-size: 26px;
+      line-height: var(--tw-leading, 32px);
+    }
+  }
+  .xl\:text-regular {
+    @media (width >= 80rem) {
+      font-size: 16px;
+      line-height: var(--tw-leading, 26px);
+    }
+  }
+  .xl\:text-sectiontitle2 {
+    @media (width >= 80rem) {
+      font-size: 40px;
+      line-height: var(--tw-leading, 52px);
+    }
+  }
   .xl\:text-sectiontitle3 {
     @media (width >= 80rem) {
       font-size: 44px;
@@ -1628,6 +1670,12 @@
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
+  .dark\:shadow-solid-6 {
+    &:is(.dark *) {
+      --tw-shadow: 0px 8px 24px var(--tw-shadow-color, rgba(10, 16, 35, .08));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
   .dark\:before\:bg-darkmode {
     &:is(.dark *) {
       &::before {
@@ -1649,6 +1697,15 @@
       &:hover {
         @media (hover: hover) {
           background-color: var(--color-gray-700);
+        }
+      }
+    }
+  }
+  .dark\:hover\:bg-hoverdark {
+    &:is(.dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-hoverdark);
         }
       }
     }

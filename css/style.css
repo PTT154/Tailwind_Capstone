@@ -39,6 +39,10 @@ body {
     font-weight: 400;
 }
 
+button {
+    cursor: pointer;
+}
+
 .started__btn a {
     transition: all 0.3s;
 }
@@ -108,4 +112,72 @@ body {
     width: 1.25rem;
     border-radius: 9999px;
     background: #007aff;
+}
+
+/* fadeInDownBrand */
+@keyframes fadeInDownBrand {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDownBrand {
+    animation: fadeInDownBrand 1s both;
+}
+
+/* fadeInDown */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -10%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    animation: fadeInDown 1s both;
+}
+
+/* fadeInLeft */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-10%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1s both;
+}
+
+/* fadeInRight */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(10%, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.fadeInRight {
+    animation: fadeInRight 1s both;
 }
