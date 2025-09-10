@@ -27,6 +27,7 @@
 
 @theme {
   --color-waterloo: #757693;
+  --color-manatee: rgb(153 154 161);
 
   --color-textlight: rgb(117 118 147);
   --color-textdark: rgb(153 154 161);
@@ -53,4 +54,5 @@
   --color-blacksection: rgb(28 33 54);
 
   --color-zumthor: rgb(237 245 255);
+  --color-blackho: rgb(44 49 73);
 }
