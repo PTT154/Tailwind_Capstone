@@ -15,7 +15,8 @@ module.exports = {
                 'solid-3': '0px 6px 90px rgba(8, 14, 40, .04)',
                 'solid-4': '0px 6px 90px rgba(8, 14, 40, .1)',
                 'solid-5': '0px 8px 24px rgba(45, 74, 170, .08)',
-                'solid-6': '0px 8px 24px rgba(10, 16, 35, .08)'
+                'solid-6': '0px 8px 24px rgba(10, 16, 35, .08)',
+                'solid-10': '0px 8px 30px rgba(45, 74, 170, .06)',
             },
             fontSize: {
                 'hero': ['44px', { lineHeight: '58px' }],
