@@ -17,6 +17,7 @@ module.exports = {
                 'solid-5': '0px 8px 24px rgba(45, 74, 170, .08)',
                 'solid-6': '0px 8px 24px rgba(10, 16, 35, .08)',
                 'solid-10': '0px 8px 30px rgba(45, 74, 170, .06)',
+                'solid-11': '0px 6px 20px rgba(45, 74, 170, .05)',
             },
             fontSize: {
                 'hero': ['44px', { lineHeight: '58px' }],
@@ -28,6 +29,7 @@ module.exports = {
                 'metatitle3': ["18px", {lineHeight: "26px"}],
                 'itemtitle': ["26px", {lineHeight: "32px"}],
                 'regular': ["16px", {lineHeight: "26px"}],
+                'itemtitle2': ["24px", {lineHeight: "32px"}],
             },
         },
     },

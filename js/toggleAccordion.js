@@ -3,7 +3,17 @@ document.querySelectorAll('.faq-toggle-btn > button').forEach((btn) => {
         const content = btn.parentElement.querySelector('.faq-content');
         // Đóng tất cả các content khác (nếu muốn chỉ mở 1 cái)
         document.querySelectorAll('.faq-content').forEach((el) => {
-            if (el !== content) el.classList.add('hidden');
+            if (el !== content) {
+                el.classList.add('hidden');
+                const otherBtn = el.parentElement.querySelector('button');
+                if (otherBtn) {
+                    const otherSvg = otherBtn.querySelector('svg');
+                    if (otherSvg) {
+                        otherSvg.innerHTML = `<path d="M7.83331 7.83337V0.833374H10.1666V7.83337H17.1666V10.1667H10.1666V17.1667H7.83331V10.1667H0.833313V7.83337H7.83331Z" fill="currentColor"></path>`;
+                    }
+                }
+            }
+
         });
         // Toggle content hiện tại
         content.classList.toggle('hidden');
