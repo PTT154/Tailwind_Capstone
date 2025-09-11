@@ -17,6 +17,10 @@
   .max-w-c-1315 {
     max-width: 82.188rem;
   }
+
+  .max-w-c-1280 {
+    max-width: 80rem;
+  }
 }
 
 @layer base {

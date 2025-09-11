@@ -815,9 +815,6 @@
   .fill-white {
     fill: var(--color-white);
   }
-  .object-cover {
-    object-fit: cover;
-  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -2128,6 +2125,9 @@
   }
   .max-w-c-1315 {
     max-width: 82.188rem;
+  }
+  .max-w-c-1280 {
+    max-width: 80rem;
   }
 }
 @layer base {
