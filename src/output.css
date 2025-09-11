@@ -7,17 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: rgb(24 28 49);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
@@ -31,6 +23,7 @@
     --font-weight-bold: 700;
     --radius-xs: 0.125rem;
     --radius-sm: 0.25rem;
+    --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
@@ -208,6 +201,9 @@
   }
 }
 @layer utilities {
+  .\!visible {
+    visibility: visible !important;
+  }
   .invisible {
     visibility: hidden;
   }
@@ -289,9 +285,6 @@
   .left-2\.5 {
     left: calc(var(--spacing) * 2.5);
   }
-  .left-\[-1\.875rem\] {
-    left: -1.875rem;
-  }
   .-z-1 {
     z-index: calc(1 * -1);
   }
@@ -339,6 +332,9 @@
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
@@ -523,11 +519,20 @@
   .h-\[384px\] {
     height: 384px;
   }
+  .h-auto {
+    height: auto;
+  }
   .h-full {
     height: 100%;
   }
+  .max-h-\[400px\] {
+    max-height: 400px;
+  }
   .\!w-full {
     width: 100% !important;
+  }
+  .w-0 {
+    width: calc(var(--spacing) * 0);
   }
   .w-0\.5 {
     width: calc(var(--spacing) * 0.5);
@@ -693,6 +698,9 @@
   }
   .rounded-lg {
     border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
   }
   .rounded-sm {
     border-radius: var(--radius-sm);
@@ -974,9 +982,6 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-gray-500 {
-    color: var(--color-gray-500);
-  }
   .text-primary {
     color: var(--color-primary);
   }
@@ -1063,6 +1068,12 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .delay-150 {
+    transition-delay: 150ms;
+  }
+  .delay-200 {
+    transition-delay: 200ms;
+  }
   .delay-300 {
     transition-delay: 300ms;
   }
@@ -1097,6 +1108,13 @@
   }
   .backface-hidden {
     backface-visibility: hidden;
+  }
+  .group-hover\:visible {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        visibility: visible;
+      }
+    }
   }
   .group-hover\:scale-110 {
     &:is(:where(.group):hover *) {
@@ -1242,13 +1260,6 @@
       }
     }
   }
-  .hover\:bg-gray-100 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-gray-100);
-      }
-    }
-  }
   .hover\:bg-primaryho {
     &:hover {
       @media (hover: hover) {
@@ -1309,17 +1320,6 @@
       border-color: var(--color-waterloo);
     }
   }
-  .focus\:ring-2 {
-    &:focus {
-      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
-      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .focus\:ring-gray-200 {
-    &:focus {
-      --tw-ring-color: var(--color-gray-200);
-    }
-  }
   .focus\:outline-none {
     &:focus {
       --tw-outline-style: none;
@@ -1374,11 +1374,6 @@
       width: calc(4/5 * 100%);
     }
   }
-  .md\:w-\[20\%\] {
-    @media (width >= 48rem) {
-      width: 20%;
-    }
-  }
   .md\:w-\[45\%\] {
     @media (width >= 48rem) {
       width: 45%;
@@ -1427,11 +1422,6 @@
   .md\:gap-0 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 0);
-    }
-  }
-  .md\:gap-8 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 8);
     }
   }
   .md\:border-0 {
@@ -1661,6 +1651,11 @@
       visibility: visible;
     }
   }
+  .xl\:left-\[-1\.875rem\] {
+    @media (width >= 80rem) {
+      left: -1.875rem;
+    }
+  }
   .xl\:mt-0 {
     @media (width >= 80rem) {
       margin-top: calc(var(--spacing) * 0);
@@ -1674,6 +1669,11 @@
   .xl\:mb-21\.5 {
     @media (width >= 80rem) {
       margin-bottom: calc(var(--spacing) * 21.5);
+    }
+  }
+  .xl\:block {
+    @media (width >= 80rem) {
+      display: block;
     }
   }
   .xl\:flex {
@@ -1765,6 +1765,11 @@
   .xl\:gap-32\.5 {
     @media (width >= 80rem) {
       gap: calc(var(--spacing) * 32.5);
+    }
+  }
+  .xl\:p-0 {
+    @media (width >= 80rem) {
+      padding: calc(var(--spacing) * 0);
     }
   }
   .xl\:p-12\.5 {
@@ -1889,13 +1894,10 @@
       opacity: 0%;
     }
   }
-  .group-hover\:xl\:visible {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        @media (width >= 80rem) {
-          visibility: visible;
-        }
-      }
+  .xl\:shadow-none {
+    @media (width >= 80rem) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .group-hover\:xl\:translate-y-\[1\.625rem\] {
@@ -2027,11 +2029,6 @@
       color: var(--color-black);
     }
   }
-  .dark\:text-gray-400 {
-    &:is(.dark *) {
-      color: var(--color-gray-400);
-    }
-  }
   .dark\:text-manatee {
     &:is(.dark *) {
       color: var(--color-manatee);
@@ -2070,15 +2067,6 @@
       }
     }
   }
-  .dark\:hover\:bg-gray-700 {
-    &:is(.dark *) {
-      &:hover {
-        @media (hover: hover) {
-          background-color: var(--color-gray-700);
-        }
-      }
-    }
-  }
   .dark\:hover\:bg-hoverdark {
     &:is(.dark *) {
       &:hover {
@@ -2111,19 +2099,19 @@
       }
     }
   }
-  .dark\:focus\:ring-gray-600 {
-    &:is(.dark *) {
-      &:focus {
-        --tw-ring-color: var(--color-gray-600);
-      }
-    }
-  }
   .dark\:focus\:placeholder\:text-white {
     &:is(.dark *) {
       &:focus {
         &::placeholder {
           color: var(--color-white);
         }
+      }
+    }
+  }
+  .xl\:dark\:bg-transparent {
+    @media (width >= 80rem) {
+      &:is(.dark *) {
+        background-color: transparent;
       }
     }
   }

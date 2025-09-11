@@ -41,50 +41,49 @@
                     <img alt="logo" loading="lazy" width="120" height="30" decoding="async" data-nimg="1"
                         class="w-full dark:hidden block" src="./img/logo/logo-light.svg" style="color:transparent" />
                 </a>
-                <!-- Toggle Button -->
-                <button aria-label="navbar-default" type="button" class="block xl:hidden items-center justify-center text-sm
-                 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400
-                 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" id="toggleBtn">
+                <!-- Mobile Dropdown Toggle Button -->
+                <button id="toggleBtn" aria-label="button for menu toggle" class="block xl:hidden">
                     <span class="relative block h-5.5 w-5.5 cursor-pointer">
                         <span class="du-block absolute right-0 h-full w-full">
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5  rounded-sm bg-black  duration-200 ease-in-out dark:bg-white !w-full delay-300"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white !w-full delay-300"></span>
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5  rounded-sm bg-black  duration-200 ease-in-out dark:bg-white delay-400 !w-full"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white delay-400 !w-full"></span>
                             <span
-                                class="relative left-0 top-0 my-1 block h-0.5 rounded-sm bg-black  duration-200 ease-in-out dark:bg-white !w-full delay-500"></span>
+                                class="relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white !w-full delay-500"></span>
                         </span>
                         <span class="du-block absolute right-0 h-full w-full rotate-45">
                             <span
-                                class="absolute left-2.5 top-0 block  w-0.5 rounded-sm bg-black duration-200 ease-in-out dark:bg-white !h-0 delay-[0]"></span>
+                                class="absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white !h-0 delay-[0]"></span>
                             <span
-                                class="delay-400 absolute left-0 top-2.5 block w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white dealy-200 !h-0"></span>
+                                class="delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white dealy-200 !h-0"></span>
                         </span>
                     </span>
                 </button>
-
             </div>
-            <div class="invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false">
-                <nav>
-                    <ul
-                        class="flex flex-col gap-5 md:flex-row md:items-center md:gap-8 xl:flex-row xl:items-center xl:gap-10">
 
+            <!-- DropDown -->
+            <div id="target"
+                class="invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full false">
+                <nav>
+                    <ul class="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
                         <li>
                             <a href="#" class="text-primary hover:text-primary">Home</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-primary">Features</a>
+                            <a href="#features" class="hover:text-primary">Features</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-primary">Blog</a>
+                            <a href="#blog" class="hover:text-primary">Blog</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:text-primary">Docs</a>
+                            <a href="https://solid.nextjstemplates.com/docs" class="hover:text-primary">Docs</a>
                         </li>
 
                         <!-- Dropdown menu -->
                         <li class="group relative">
-                            <button class="flex cursor-pointer items-center justify-between gap-3 hover:text-primary">
+                            <button id="pageDropDown"
+                                class="flex cursor-pointer items-center justify-between gap-3 hover:text-primary">
                                 Pages
                                 <span>
                                     <svg class="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
@@ -96,35 +95,38 @@
                                 </span>
                             </button>
 
-                            <div class="dropdown absolute xl:invisible xl:mt-0 xl:w-[250px] xl:translate-y-10 xl:opacity-0 
-                            left-[-1.875rem] rounded-[0.375rem] border bg-white py-5 px-8 before:bg-white border-lightborder
+                            <!-- pageDropDown -->
+                            <div class="xl:block dropdown absolute xl:invisible xl:mt-0 xl:w-[250px] xl:translate-y-10 xl:opacity-0 
+                            xl:left-[-1.875rem] rounded-[0.375rem] border bg-white py-5 px-8 before:bg-white border-lightborder
                             dark:border-darkborder dark:bg-darkmode dark:before:bg-darkmode
-                            group-hover:xl:visible group-hover:xl:translate-y-[1.625rem] group-hover:xl:opacity-100">
-                                <ul class=" xl:flex flex-col gap-[1rem]">
+                            group-hover:visible group-hover:xl:translate-y-[1.625rem] group-hover:xl:opacity-100
+                            
+                            mt-2 w-full hidden">
+                                <ul class="flex flex-col gap-[1rem]">
                                     <li class="hover:text-primary">
-                                        <a href="#">Blog Grid</a>
+                                        <a href="#blog">Blog Grid</a>
                                     </li>
                                     <li class="hover:text-primary">
-                                        <a href="/auth/signin">Sign In</a>
+                                        <a href="https://solid.nextjstemplates.com/auth/signin">Sign In</a>
                                     </li>
                                     <li class="hover:text-primary">
-                                        <a href="/auth/signup">Sign Up</a>
+                                        <a href="https://solid.nextjstemplates.com/auth/signup">Sign Up</a>
                                     </li>
                                     <li class="hover:text-primary">
-                                        <a href="/docs">Docs</a>
+                                        <a href="https://solid.nextjstemplates.com/docs">Docs</a>
                                     </li>
                                     <li class="hover:text-primary">
-                                        <a href="/support">Support</a>
+                                        <a href="#support">Support</a>
                                     </li>
                                     <li class="hover:text-primary">
-                                        <a href="/error">404</a>
+                                        <a href="https://solid.nextjstemplates.com/error">404</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
                         <li>
-                            <a href="#" class="hover:text-primary">Support</a>
+                            <a href="#support" class="hover:text-primary">Support</a>
                         </li>
                     </ul>
 
@@ -137,7 +139,8 @@
                             <g clip-path="url(#clip0_369_1884)">
                                 <path
                                     d="M16.9347 15.3963L12.4816 11.7799C14.3168 9.26991 14.1279 5.68042 11.8338 3.41337C10.6194 2.19889 9.00003 1.52417 7.27276 1.52417C5.54549 1.52417 3.92617 2.19889 2.71168 3.41337C0.201738 5.92332 0.201738 10.0256 2.71168 12.5355C3.92617 13.75 5.54549 14.4247 7.27276 14.4247C8.91907 14.4247 10.4574 13.804 11.6719 12.6975L16.179 16.3409C16.287 16.4219 16.4219 16.4759 16.5569 16.4759C16.7458 16.4759 16.9077 16.3949 17.0157 16.26C17.2316 15.9901 17.2046 15.6122 16.9347 15.3963ZM7.27276 13.2102C5.86935 13.2102 4.5739 12.6705 3.57532 11.6719C1.52418 9.62076 1.52418 6.30116 3.57532 4.27701C4.5739 3.27843 5.86935 2.73866 7.27276 2.73866C8.67617 2.73866 9.97162 3.27843 10.9702 4.27701C13.0213 6.32815 13.0213 9.64775 10.9702 11.6719C9.99861 12.6705 8.67617 13.2102 7.27276 13.2102Z"
-                                    fill="currentColor"></path>
+                                    fill="currentColor">
+                                </path>
                             </g>
                             <defs>
                                 <clipPath id="clip0_369_1884">
@@ -153,15 +156,14 @@
                             class="dark:hidden block" style="color:transparent" src="./img/icon-moon.svg" />
                         <img alt="logo" loading="lazy" width="22" height="22" decoding="async" data-nimg="1"
                             class="hidden dark:block" style="color:transparent" src="./img/icon-sun.svg" />
-
                     </button>
-                    <a class="text-regular font-medium text-waterloo hover:text-primary" href="#">Sign In</a>
-                    <a class="xl:flex hidden items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
-                        href="/auth/signup">Sign Up</a>
+                    <a class="text-regular font-medium text-waterloo hover:text-primary"
+                        href="https://solid.nextjstemplates.com/auth/signin">Sign In</a>
+                    <a class="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
+                        href="https://solid.nextjstemplates.com/auth/signup">Sign Up</a>
                 </div>
             </div>
         </div>
-
     </header>
 
     <main>
@@ -183,8 +185,9 @@
                             Built-winth - Next.js, React 18 and TypeScript.</p>
                         <div class="started__btn mt-10">
                             <a class="inline-block rounded-full text-white bg-black dark:bg-blackbtn px-7.5 py-2.5"
-                                href="">Get
-                                Started</a>
+                                href="https://solid.nextjstemplates.com/auth/signup">
+                                Get Started
+                            </a>
                         </div>
                     </div>
                     <div class="wow fadeInRight banner__right md:w-1/2 hidden lg:block">
@@ -276,11 +279,12 @@
                     </div>
                     <h2
                         class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
-                        Core Features of Solid</h2>
-                    <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. In
-                        convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-                        ante in maximus.</p>
+                        Core Features of Solid
+                    </h2>
+                    <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae
+                        tortor lacus. Phasellus aliquam ante in maximus.
+                    </p>
                 </div>
                 <div
                     class="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
@@ -291,7 +295,8 @@
                                 style="color:transparent" src="./img/icon/icon-01.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                            Crafted for SaaS</h3>
+                            Crafted for SaaS
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                     <div class="wow fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
@@ -301,7 +306,8 @@
                                 style="color:transparent" src="./img/icon/icon-02.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                            High-quality Design</h3>
+                            High-quality Design
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                     <div class="wow fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
@@ -311,7 +317,8 @@
                                 style="color:transparent" src="./img/icon/icon-03.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                            Next.js + TypeScript</h3>
+                            Next.js + TypeScript
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                     <div class="wow fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
@@ -321,7 +328,8 @@
                                 style="color:transparent" src="./img/icon/icon-04.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                            Sanity Blog and Docs</h3>
+                            Sanity Blog and Docs
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                     <div class="wow fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
@@ -331,7 +339,8 @@
                                 style="color:transparent" src="./img/icon/icon-05.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">DB,
-                            Auth and Stripe</h3>
+                            Auth and Stripe
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                     <div class="wow fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
@@ -341,7 +350,8 @@
                                 style="color:transparent" src="./img/icon/icon-06.svg" />
                         </div>
                         <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                            Regular Free Updates</h3>
+                            Regular Free Updates
+                        </h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
                     </div>
                 </div>
@@ -684,11 +694,11 @@
                             vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
                     </div>
                     <!-- right -->
-                    <div class="md:w-[20%] lg:w-[45%]">
+                    <div class="lg:w-[45%]">
                         <div class="flex items-center justify-end xl:justify-between wow fadeInRight"
                             data-wow-duration="2s">
-                            <img src="./img/shape/shape-06.webp" alt="" class="w-[299px] h-[299px]">
-                            <a href=""
+                            <img src="./img/shape/shape-06.webp" alt="" class="w-[299px] h-[299px] hidden xl:block">
+                            <a href="https://solid.nextjstemplates.com/signup"
                                 class="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black">
                                 Sign up free
                                 <span class="pl-2.5">
@@ -1020,7 +1030,7 @@
         </section>
 
         <!-- Form (Send a message) phuoc -->
-        <section class="px-4 md:px-8 2xl:px-0">
+        <section id="support" class="px-4 md:px-8 2xl:px-0">
             <div class="relative mx-auto max-w-c-1390 px-7.5 pt-10 lg:px-15 lg:pt-15 xl:px-20 xl:pt-20">
                 <!-- background -->
                 <div
@@ -1112,7 +1122,7 @@
         </section>
 
         <!-- Blog Tan -->
-        <section class="mx-auto max-w-c-1235 overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0 ">
+        <section id="blog" class="mx-auto max-w-c-1235 overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0 ">
             <div class=" px-4 md:px-8 xl:px-0">
                 <div class="animate_top mx-auto text-center">
                     <div class="animate_top mx-auto text-center">
@@ -1405,6 +1415,8 @@
     <script src="./js/backToTopmain.js"></script>
     <script src="./js/util.js"></script>
 
+    <script src="./js/toggleDropDown.js"></script>
+    <script src="./js/togglePageDropDown.js"></script>
     <script src="./js/theme.js"></script>
     <script src="./js/headerborder.js"></script>
     <script src="./js/toggleAccordion.js"></script>
